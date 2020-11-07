@@ -2,7 +2,7 @@
 
 require "QuadraticEquation.php";
 
-$solveEqua = new QuadraticEquation(1, -5, 4);
+$solveEqua = new QuadraticEquation(1, -11, 4);
 
 if ($solveEqua->getDiscriminant() > 0) {
 
