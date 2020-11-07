@@ -9,9 +9,9 @@ $stopwatch = new StopWatch();
 
 
 $stopwatch->start();
-
 $time1 = $stopwatch->getElapsedTime();
 echo $time1 . "<br>";
+echo "Start time: " . $stopwatch->getStartTime()."<br>";
 
 //$arr = array(3, 0, 2, 5, -1, 4, 1);
 
@@ -24,12 +24,12 @@ for ($i = 0; $i <= 1000; $i++) {
 $new_arr = $stopwatch->selection_sort($arr);
 
 $stopwatch->stop();
-
 $time2 = $stopwatch->getElapsedTime();
 echo $time2 . "<br>";
+echo "End time: " . $stopwatch->getEndTime();
 
 
-echo "Time from start to stop:" . print("<pre>" . print_r($stopwatch->mstoDate($time2 - $time1), true) . "</pre>");
+ print("<pre>" . print_r($stopwatch->mstoDate($time2 - $time1), true) . "</pre>");
 
 
-print("<pre>" . print_r($arr, true) . "</pre>");
+print("<pre>" . print_r($new_arr, true) . "</pre>");

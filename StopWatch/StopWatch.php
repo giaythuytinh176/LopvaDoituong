@@ -24,7 +24,7 @@ class StopWatch
     public function getElapsedTime()
     {
         $milliseconds = round(microtime(true) * 1000);
-       // echo strtotime($this->startTime);
+        // echo strtotime($this->startTime);
         return $milliseconds;
     }
 
@@ -60,6 +60,7 @@ class StopWatch
         $date['day'] = $date['hour'] / 8600;
         return $date;
     }
+
     /**
      * @return mixed
      */
