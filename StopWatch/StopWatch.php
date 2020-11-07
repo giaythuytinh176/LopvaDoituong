@@ -28,6 +28,38 @@ class StopWatch
         return $milliseconds;
     }
 
+    function swap_positions($arr, $left, $right)
+    {
+        $backup_arr_right = $arr[$right];
+        $arr[$right] = $arr[$left];
+        $arr[$left] = $backup_arr_right;
+        return $arr;
+    } // asort;
+
+    function selection_sort($arr)
+    {
+        for ($i = 0; $i < count($arr) - 1; $i++) {
+            $min = $i;
+            for ($j = $i + 1; $j < count($arr); $j++) {
+                if ($arr[$j] < $arr[$min]) {
+                    $min = $j;
+                }
+            }
+            $arr = $this->swap_positions($arr, $i, $min);
+        }
+        return $arr;
+    }
+
+    function mstoDate($ms)
+    {
+        $date = [];
+        $date['ms'] = $ms;
+        $date['second'] = $ms / 1000;
+        $date['minutes'] = $date['second'] / 60;
+        $date['hour'] = $date['minutes'] / 3600;
+        $date['day'] = $date['hour'] / 8600;
+        return $date;
+    }
     /**
      * @return mixed
      */
