@@ -13,19 +13,52 @@ class QuadraticEquation
         $this->c = $c;
     }
 
-    function getA()
+    /**
+     * @return mixed
+     */
+    public function getA()
     {
         return $this->a;
     }
 
-    function getB()
+    /**
+     * @return mixed
+     */
+    public function getB()
     {
         return $this->b;
     }
 
-    function getC()
+    /**
+     * @return mixed
+     */
+    public function getC()
     {
         return $this->c;
+    }
+
+    /**
+     * @param mixed $a
+     */
+    public function setA($a)
+    {
+        $this->a = $a;
+    }
+
+    /**
+     * @param mixed $b
+     */
+    public function setB($b)
+    {
+        $this->b = $b;
+    }
+
+    /**
+     * @param mixed $c
+     */
+    public function setC($c)
+    {
+        $this->c = $c;
     }
 
     function getDiscriminant()
